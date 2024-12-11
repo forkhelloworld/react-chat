@@ -1,7 +1,5 @@
-import SignUpForm from "./components/SignUpForm";
-
 function App() {
-  return <SignUpForm />;
+  return <h1>Welcome</h1>;
 }
 
 export default App;
