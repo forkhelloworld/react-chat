@@ -1,0 +1,16 @@
+.form-container {
+  width: 20vw;
+  margin: 0 auto;
+  border: 1px solid grey;
+  padding: 3%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form * {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,34 @@
+.chat {
+  width: 100%;
+  height: 80%;
+  border: 1px solid lightgrey;
+  background-color: lemonchiffon;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.message-container {
+  padding: 1%;
+  border: 1px solid grey;
+  background-color: blanchedalmond;
+  width: 20vw;
+  border-radius: 8px;
+  margin-bottom: 2vh;
+}
+
+.message-author {
+  font-size: 0.9em;
+  color: grey;
+  margin-bottom: 0.8em;
+}
+
+.current-user-message {
+  align-self: flex-end;
+}
+
+.message-image {
+  width: 15vw;
+}

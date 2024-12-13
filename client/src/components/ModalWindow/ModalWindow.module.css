@@ -1,0 +1,31 @@
+.back-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.551);
+  z-index: 2;
+}
+
+.modal-window {
+  width: 25vw;
+  /* height: 20vh; */
+  background-color: white;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  z-index: 3;
+  padding: 2%;
+}
+
+.modal-window * {
+  margin-bottom: 3%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+}

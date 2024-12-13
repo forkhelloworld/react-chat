@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  height: 20vh;
+  background-color: ivory;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: row;
+}
+
+.drag-active {
+  border: 4px dashed lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(182, 190, 201, 0.661);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.textarea {
+  width: 95%;
+  height: 19vh;
+}
+
+.input-wrapper {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+
+  position: relative;
+}
+
+.input-file {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.input-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

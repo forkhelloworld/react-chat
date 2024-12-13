@@ -2,6 +2,9 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import { format } from "date-fns";
 import CustomField from "../CustomField";
+import { signUpRequest } from "../../actions/actionCreators";
+import styles from "../../pages/Home/Home.module.css";
+import { connect } from "react-redux";
 
 const SignUpForm = (props) => {
   const [fileImage, setFile] = useState();
@@ -14,7 +17,7 @@ const SignUpForm = (props) => {
       birthday: format(new Date(), "yyyy-MM-dd"),
     },
     onSubmit: (values) => {
-      console.log(values);
+      props.signUpRequest(values);
     },
   });
 
@@ -25,7 +28,7 @@ const SignUpForm = (props) => {
     <form
       onSubmit={formik.handleSubmit}
       onReset={formik.handleReset}
-    //className={styles.form}
+      className={styles.form}
     >
       <CustomField
         type="text"
@@ -63,4 +66,8 @@ const SignUpForm = (props) => {
   );
 };
 
-export default SignUpForm;
+const mapDispatchToProps = {
+  signUpRequest,
+};
+
+export default connect(null, mapDispatchToProps)(SignUpForm);

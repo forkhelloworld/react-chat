@@ -1,0 +1,13 @@
+.messenger-wrapper {
+  width: 98vw;
+  height: 98vh;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}

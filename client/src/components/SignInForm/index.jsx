@@ -1,5 +1,8 @@
 import { useFormik } from "formik";
 import CustomField from "../CustomField";
+import { signInRequest } from "../../actions/actionCreators";
+import styles from "../../pages/Home/Home.module.css";
+import { connect } from "react-redux";
 
 const SignInForm = (props) => {
   const formik = useFormik({
@@ -8,7 +11,7 @@ const SignInForm = (props) => {
       password: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      props.signInRequest(values);
     },
   });
 
@@ -16,7 +19,7 @@ const SignInForm = (props) => {
     <form
       onSubmit={formik.handleSubmit}
       onReset={formik.handleReset}
-    //className={styles.form}
+      className={styles.form}
     >
       <CustomField
         type="text"
@@ -35,4 +38,7 @@ const SignInForm = (props) => {
   );
 };
 
-export default SignInForm;
+const mapDispatchToProps = {
+  signInRequest,
+};
+export default connect(null, mapDispatchToProps)(SignInForm);
